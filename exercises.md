@@ -34,8 +34,11 @@
   - [Bonus: Admin create product form](#bonus-admin-create-product-form-after-exercise-4)
 - [Exercise 5: Add a streamed section with Skeleton fallback](#exercise-5-add-a-streamed-section-with-skeleton-fallback)
 - [Exercise 6: Tag-based revalidation for cart](#exercise-6-tag-based-revalidation-for-cart)
-  - [Exercise 7: Tag-based revalidation for products list](#exercise-7-tag-based-revalidation-for-products-list)
-  - [Bonus: Replace anchor tags with Next.js Link](#bonus-replace-anchor-tags-with-nextjs-link)
+- [Exercise 7: Tag-based revalidation for products list](#exercise-7-tag-based-revalidation-for-products-list)
+
+---
+
+- [Bonus: Replace anchor tags with Next.js Link](#bonus-replace-anchor-tags-with-nextjs-link)
 - [Bonus: Checkout page](#bonus-checkout-page-clear-cart-via-action-redirect-to-confirmation-page)
 - [Bonus: Quantity update cart nav link with optimistic UI](#bonus-quantity-update-cart-nav-link-with-optimistic-ui)
 - [Bonus: Replace anchor tags with Next.js Link](#bonus-replace-anchor-tags-with-nextjs-link)
