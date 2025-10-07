@@ -8,7 +8,7 @@ import { getProduct } from "@/lib/db";
 import { formatEuros } from "@/lib/format";
 import { AddToCartForm } from "@/app/(shop)/products/[id]/AddToCartForm";
 
-type Params = { params: { id: string } };
+type Params = { params: Promise<{ id: string }> };
 
 // generateMetadata is a function that generates metadata for a product page.
 // It is used to set the title and description of a product page.

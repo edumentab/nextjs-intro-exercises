@@ -21,7 +21,7 @@ export default async function ProductsPage({ searchParams }: Props) {
     URL parameters are set by the form, which is a default behavior of the browser.
   */
 
-  // Note: check devtools warning
+  // Note: check devtools warning, update props
   const { q } = searchParams ?? {};
 
   return (

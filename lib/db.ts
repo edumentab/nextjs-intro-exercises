@@ -11,20 +11,11 @@ import {
   saveUpdatedCart,
   saveUpdatedProducts,
 } from "./db-helpers";
-
-export type Product = {
-  id: string;
-  name: string;
-  price: number;
-  category: "books" | "electronics" | "fashion";
-  description: string;
-};
-
-export type CartItem = { id: string; quantity: number };
+import { CartItem, Category, Product } from "./types";
 
 export async function listProducts(
   q?: string,
-  category?: Product["category"],
+  category?: Category
 ): Promise<Product[]> {
   // simulate latency to showcase Suspense/streaming
   await sleep(600);
@@ -67,13 +58,13 @@ export async function createProduct(p: Omit<Product, "id"> & { id?: string }) {
 }
 
 export async function getCart(): Promise<CartItem[]> {
-  await sleep(200);
+  await sleep(300);
   const cart = await readCart();
   return cart.map((item) => ({ ...item }));
 }
 
 export async function addToCart(id: string, quantity: number = 1) {
-  await sleep(200);
+  await sleep(300);
   const cart = await readCart();
   const existing = cart.find((c) => c.id === id);
   // if the item is in the cart, update its quantity
@@ -95,7 +86,7 @@ export async function addToCart(id: string, quantity: number = 1) {
  * setCartItemQuantity("123", 2);
  */
 export async function setCartItemQuantity(id: string, quantity: number) {
-  await sleep(200);
+  await sleep(300);
   const cart = await readCart();
   const normalizedQuantity = normalizeRequestedQuantity(quantity);
   // if normalizedQuantity is 0, remove the item from the cart
@@ -121,7 +112,7 @@ export async function setCartItemQuantity(id: string, quantity: number) {
  * removeFromCart("123");
  */
 export async function removeFromCart(id: string) {
-  await sleep(200);
+  await sleep(300);
   const cart = await readCart();
   const updatedCart = cart.filter((item) => item.id !== id);
   await saveUpdatedCart(updatedCart);
