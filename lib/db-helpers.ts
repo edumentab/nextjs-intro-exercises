@@ -1,6 +1,6 @@
 import path from "path";
 import { promises as fs } from "fs";
-import { Product, CartItem } from "./db";
+import { Product, CartItem } from "./types";
 
 const DEFAULT_PRODUCTS: Product[] = [
   {
